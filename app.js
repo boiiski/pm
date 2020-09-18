@@ -128,4 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
     checkForGameOver()
   }
   document.addEventListener('keyup', movePacman)
+
+  function pointsEaten() {
+    if (squares[pacmanCurrentIndex].classList.contains('points')) {
+      score++
+      scoreCount.innerHTML = score
+      squares[pacmanCurrentIndex].classList.remove('points')
+    }
+  }
 })
