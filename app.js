@@ -199,6 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ghosts.forEach(ghost => moveGhost(ghost))
 
+
+      //moving ghost functionality
   function moveGhost(ghost) {
     const directions =  [-1, +1, width, -width]
     let direction = directions[Math.floor(Math.random() * directions.length)]
