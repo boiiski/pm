@@ -203,4 +203,12 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(function(){ alert("Game Over"); }, 500)
         }
       }
+
+      function checkForWin() {
+        if (score === 274) {
+          ghosts.forEach(ghost => clearInterval(ghost.timerId))
+          document.removeEventListener('keyup', movePacman)
+          setTimeout(function(){ alert("You Won!"); }, 500)
+        }
+      }
 })
